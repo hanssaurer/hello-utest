@@ -2,20 +2,21 @@
 #include <iostream>
 using namespace std;
 
-void Hello::greeting()
+void Hello::greet()
 {
-  if (formal)
-    cout << "Hello, nice to meet you!" << endl;
-  else 
-    cout << "What's up?" << endl;
+  if (myname)
+    cout << "Hello " << myname << ", nice to meet you!" << endl;
+  else
+    cout << "Hello unknown!"  << endl;
+
 }
 
-void Hello::setFormal(bool f)
+void Hello::setName(const char* name)
 {
-  formal = f;
+  myname = name;
 }
 
-bool Hello::getFormal()
+const char*  Hello::getName()
 {
-  return formal;
+  return myname;
 }

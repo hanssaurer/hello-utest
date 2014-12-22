@@ -4,11 +4,11 @@
 class Hello
 {
 private:
-  bool formal;
+  const char* myname;
 public:
-  void greeting();
-  void setFormal(bool f);
-  bool getFormal();
+  void greet();
+  void setName(const char *name);
+  const char *getName();
 };
 
 #endif /*HELLO_H_*/
